@@ -1,4 +1,4 @@
 hcpbook
 =======
 
-Git Repository for HCP Book
+Git Repository for Getting Started with SAP HANA Cloud Platform
