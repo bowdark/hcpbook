@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xmlns="http://java.sun.com/xml/ns/javaee" 
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+         id="WebApp_ID" version="3.0">
+  <display-name>Example08_02</display-name>
+  <servlet>
+    <servlet-name>TravelAgentAPIServlet</servlet-name>
+    <servlet-class>com.sappress.hcpbook.chp08.TravelAgentAPIServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TravelAgentAPIServlet</servlet-name>
+    <url-pattern>/api/v1/flights</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>OAuth Scope Definition for Flight Lookup Service</display-name>
+    <filter-name>TravelAgentFlightsFilter</filter-name>
+    <filter-class>com.sap.cloud.security.oauth2.OAuthAuthorizationFilter</filter-class>
+    <init-param>
+      <param-name>scope</param-name>
+      <param-value>get-flights</param-value>
+    </init-param>
+    <init-param>
+      <param-name>http-method</param-name>
+      <param-value>get</param-value>
+    </init-param>
+    <init-param>
+      <param-name>user-principal</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>TravelAgentFlightsFilter</filter-name>
+    <url-pattern>/api/v1/flights</url-pattern>
+  </filter-mapping>
+</web-app>

@@ -1,0 +1,49 @@
+<mvc:View controllerName="hcpbook.chp05.demo.ui.BookDetails"
+          displayBlock="true"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m">
+  <Page id="pgBookDetails"
+        title="Book Details"
+        showNavButton="{device>/isPhone}"
+        navButtonPress="onNavBack"
+        class="sapUiFioriObjectPage">
+    <content>
+      <ObjectHeader title="{title}">
+        <attributes>
+          <ObjectAttribute text="Publication Year: {publicationYear}" />
+          <ObjectAttribute text="Page Count: {pageCount}" />
+        </attributes>
+      </ObjectHeader>
+      
+      <Table id="tabAuthors"
+             title="Authors"
+             items="{Authors}">
+        <headerToolbar>
+          <Toolbar>
+            <Label text="Authors" design="Bold" />
+          </Toolbar>
+        </headerToolbar>
+        <columns>
+          <Column>
+            <Label text="First Name" />
+          </Column>
+          <Column>
+            <Label text="Last Name" />
+          </Column>
+        </columns>
+        <items>
+          <ColumnListItem>
+            <cells>
+              <Text text="{firstName}" />
+              <Text text="{lastName}" />
+            </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+    </content>
+    <footer>
+      <Toolbar>
+      </Toolbar>
+    </footer>
+  </Page>
+</mvc:View>

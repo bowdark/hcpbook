@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="Incident Widget" 
+         description="HCP Book :: Chapter 6 :: Incident Editor Widget">
+    <Require feature="opensocial-0.9" />
+    <Require feature="opensocial-jquery" />
+    <Require feature="sap-xhrwrapper" />
+    <Require feature="sap-theme" />
+    <Require feature="sap-dynamic-height" />
+  </ModulePrefs>
+  
+  <Content type="html" href="IncidentWorklist.jsp"
+           view="authoring, consumption, mobile, preview, default" />
+</Module>

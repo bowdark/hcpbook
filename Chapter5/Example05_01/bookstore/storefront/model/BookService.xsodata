@@ -1,0 +1,8 @@
+service namespace "hcpbook.bookstore" {
+  "{Your HCP Trial Account}.hcpbook.bookstore.storefront.model::Bookstore.Books" as "Books"
+    navigates ("Book_Authors" as "Authors");
+  "{Your HCP Trial Account}.hcpbook.bookstore.storefront.model::Bookstore.BookAuthorsView" as "BookAuthors" key ("isbnNumber","firstName","lastName");
+  
+  association "Book_Authors" principal "Books"("isbnNumber") multiplicity "1"
+    dependent "BookAuthors"("isbnNumber") multiplicity "*";
+}

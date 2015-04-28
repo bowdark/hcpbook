@@ -1,0 +1,50 @@
+<mvc:View
+	controllerName="hybrid.view.Detail"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+	<Page
+		showNavButton="{device>/isPhone}"
+		navButtonPress="onNavBack"
+		class="sapUiFioriObjectPage"
+		title="{i18n>detailTitle}">
+		<content>
+			<ObjectHeader
+				 
+					title="{Name}"
+				
+				 
+					number="{Price}"
+				
+				 
+					numberUnit="{CurrencyCode}"
+				>
+				 
+					<ObjectAttribute text="{ShortDescription}"/>
+				
+				 
+				<ObjectAttribute text="{CategoryName}"/>
+				
+			</ObjectHeader>
+			<IconTabBar
+				select="onDetailSelect"
+				id="idIconTabBar">
+				<items>
+					<IconTabFilter
+						key="Supplier"
+						text="Supplier"
+						icon="sap-icon://hint">
+						<!--key="Detail" -->
+						<content>
+							<core:Fragment fragmentName="hybrid.view.DetailInfoForm" type="XML" />
+						</content>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+		<footer>
+			<Toolbar>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

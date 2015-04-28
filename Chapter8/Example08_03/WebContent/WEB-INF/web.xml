@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xmlns="http://java.sun.com/xml/ns/javaee" 
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+         id="WebApp_ID" version="3.0">
+  <display-name>Example08_03</display-name>
+  <welcome-file-list>
+    <welcome-file>index.do</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>ClientBootstrapServlet</servlet-name>
+    <servlet-class>com.sappress.hcpbook.chp08.ClientBootstrapServlet</servlet-class>
+    <init-param>
+      <param-name>OAuthClientId</param-name>
+      <param-value><!-- Your client ID goes here --></param-value>
+    </init-param>
+    <init-param>
+      <param-name>HCPAccount</param-name>
+      <param-value><!-- Your HCP (trial) account goes here --></param-value>
+    </init-param>
+    <init-param>
+      <param-name>HCPHost</param-name>
+      <param-value>hanatrial.ondemand.com</param-value>
+    </init-param>
+    <init-param>
+      <param-name>APIApplication</param-name>
+      <param-value>example0802</param-value>
+    </init-param>
+    <init-param>
+      <param-name>APIPath</param-name>
+      <param-value>/Example08_02/api/v1/flights</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>OAuthCallbackServlet</servlet-name>
+    <servlet-class>com.sappress.hcpbook.chp08.OAuthCallbackServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MainControllerServlet</servlet-name>
+    <servlet-class>com.sappress.hcpbook.chp08.MainControllerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClientBootstrapServlet</servlet-name>
+    <url-pattern>/index.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthCallbackServlet</servlet-name>
+    <url-pattern>/OAuth2Callback.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MainControllerServlet</servlet-name>
+    <url-pattern>/MainController.do</url-pattern>
+  </servlet-mapping>
+</web-app>

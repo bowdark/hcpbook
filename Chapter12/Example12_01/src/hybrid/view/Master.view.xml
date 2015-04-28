@@ -1,0 +1,61 @@
+<mvc:View
+	controllerName="hybrid.view.Master"
+	displayBlock="true"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Page
+		id="page"
+		title="{i18n>masterTitle}">
+		<subHeader>
+			<Bar id="searchBar">
+			    <contentLeft>
+                    <Button 
+				        type="Emphasized" 
+				        icon="sap-icon://synchronize" 
+				        text="Refresh" 
+				        press="onRefresh" />
+                </contentLeft>
+				<contentMiddle>
+					<SearchField
+						id="searchField"
+						showRefreshButton="{device>/isNoTouch}"
+						placeholder="{i18n>masterSearchPlaceholder}"
+						search="onSearch"
+						tooltip="{i18n>masterSearchTooltip}"
+						width="100%">
+					</SearchField>
+				</contentMiddle>
+			</Bar>
+		</subHeader>
+		<content>
+			<List
+				id="list"
+				items="{/Products?$orderby=Name}"
+				mode="{device>/listMode}"
+				noDataText="{i18n>masterListNoDataText}"
+				select="onSelect"
+				growing="true"
+				growingScrollToLoad="true">
+				<items>
+					<ObjectListItem
+						type="{device>/listItemType}"
+						press="onSelect"
+					 
+						title="{Name}"
+					
+					 
+						number="{Price}"
+					
+					 
+						numberUnit="{CurrencyCode}"
+					>
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+		<footer>
+			<Toolbar>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

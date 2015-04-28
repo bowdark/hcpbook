@@ -1,0 +1,67 @@
+<mvc:View controllerName="hcpbook.chp07.demo.App"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns:table="sap.ui.table"
+          xmlns:layout="sap.ui.commons.layout"
+          xmlns="sap.ui.commons"
+          displayBlock="true">
+    <layout:MatrixLayout>
+        <layout:MatrixLayoutRow>
+            <layout:MatrixLayoutCell>
+                <table:Table id="tabCustomers" 
+                             title="Customers"
+                             rows="{/Customers}"
+                             selectionMode="Single"
+                             editable="false"
+                             rowSelectionChange="onCustomerSelect">
+                  <table:Column>
+                      <Label text="Customer ID" />
+                      <table:template>
+                          <TextField value="{CustomerID}" />
+                      </table:template>
+                  </table:Column>
+                  <table:Column>
+                      <Label text="Company Name" />
+                      <table:template>
+                          <TextField value="{CompanyName}" />
+                      </table:template>
+                  </table:Column>
+                  <table:Column>
+                      <Label text="Contact Name" />
+                      <table:template>
+                          <TextField value="{ContactName}" />
+                      </table:template>
+                  </table:Column>
+                </table:Table>
+            </layout:MatrixLayoutCell>
+        </layout:MatrixLayoutRow>
+        
+        <layout:MatrixLayoutRow>
+            <layout:MatrixLayoutCell>
+                <table:Table id="tabOrders" 
+                             title="Sales Orders"
+                             selectionMode="Single"
+                             editable="false"
+                             visible="false">
+                  <table:Column>
+                      <Label text="Order Number" />
+                      <table:template>
+                          <TextField value="{OrderID}" />
+                      </table:template>
+                  </table:Column>
+                  <table:Column>
+                      <Label text="Order Date" />
+                      <table:template>
+                          <TextField value="{OrderDate}" />
+                      </table:template>
+                  </table:Column>
+                  <table:Column>
+                      <Label text="Shipment Date" />
+                      <table:template>
+                          <TextField value="{ShippedDate}" />
+                      </table:template>
+                  </table:Column>
+                </table:Table>
+            </layout:MatrixLayoutCell>
+        </layout:MatrixLayoutRow>
+    </layout:MatrixLayout>
+</mvc:View>

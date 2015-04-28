@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="jpaIncidentPU" transaction-type="JTA">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+  
+    <class>com.sappress.hcpbook.chp06.persistence.Address</class>
+    <class>com.sappress.hcpbook.chp06.persistence.Location</class>
+    <class>com.sappress.hcpbook.chp06.persistence.InvolvedPerson</class>
+    <class>com.sappress.hcpbook.chp06.persistence.Attachment</class>
+    <class>com.sappress.hcpbook.chp06.persistence.Incident</class>
+    <class>com.sappress.hcpbook.chp06.persistence.Country</class>
+    <class>com.sappress.hcpbook.chp06.persistence.Region</class>
+  
+    <properties>
+      <property name="eclipselink.ddl-generation" value="create-tables" />
+    </properties>
+  </persistence-unit>
+</persistence>

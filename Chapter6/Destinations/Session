@@ -1,0 +1,13 @@
+#mail.password=<< Existing password removed on Export >>
+#
+#Thu Jan 08 23:00:37 UTC 2015
+Type=MAIL
+mail.description=Mail Session Used to Send E-Mail Messages
+mail.user=<your_user_account>
+mail.transport.protocol=smtp
+mail.smtp.host=smtp.gmail.com
+Name=Session
+mail.debug=true
+mail.smtp.starttls.enable=true
+mail.smtp.port=587
+mail.smtp.auth=true

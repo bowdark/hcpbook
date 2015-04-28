@@ -1,0 +1,12 @@
+#
+#Mon Jan 12 22:34:37 UTC 2015
+Description=HTTP Destination Pointing to Northwind OData Sample Service
+Type=HTTP
+Authentication=NoAuthentication
+Name=northwind_http
+CloudConnectorVersion=2
+ProxyType=Internet
+URL=http\://services.odata.org/V3/Northwind/Northwind.svc
+RDEUsage=northwind
+RDESystem=Northwind
+RDEEnabled=true

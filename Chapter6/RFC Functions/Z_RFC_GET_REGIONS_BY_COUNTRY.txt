@@ -1,0 +1,14 @@
+FUNCTION Z_RFC_GET_REGIONS_BY_COUNTRY.
+*"----------------------------------------------------------------------
+*"*"Local Interface:
+*"  IMPORTING
+*"     VALUE(COUNTRY_CODE) TYPE  LAND1
+*"  TABLES
+*"      REGIONS STRUCTURE  T005U
+*"----------------------------------------------------------------------
+  SELECT *
+    INTO TABLE regions
+    FROM t005u
+   WHERE spras EQ sy-langu
+     AND land1 EQ country_code.
+ENDFUNCTION.

@@ -1,0 +1,8 @@
+#
+#Thu Jan 08 23:00:07 UTC 2015
+Name=GoogleGeocodeDest
+URL=https\://maps.googleapis.com/maps/api/geocode/json
+ProxyType=Internet
+Type=HTTP
+CloudConnectorVersion=2
+Authentication=NoAuthentication

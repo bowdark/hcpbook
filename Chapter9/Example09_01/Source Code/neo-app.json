@@ -1,0 +1,12 @@
+{
+  "authenticationMethod": "none",
+  "welcomeFile": "weather.html",
+  
+  "securityConstraints": [
+      {
+          "permission": "AccessApplicationDescriptor",
+          "description": "Access application descriptor",
+          "protectedPaths": ["/neo-app.json"]
+      }
+  ]
+}

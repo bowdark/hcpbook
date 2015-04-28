@@ -1,0 +1,83 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>HCP Book :: Chapter 9 :: Weather Widget</title>
+    
+    <style>
+      #content { float: left; }
+      #toolbar { float: right; }
+      #weather { font-size: large; font-weight: bold; }
+    </style>
+    
+    <script type="text/javascript">
+      /**
+       * Function used to initialize the weather widget.
+       */
+      function init() {
+        // Set the dynamic height of the widget:
+        gadgets.sap.dynamicHeight.adjustHeight();
+        
+        // Register event handlers for the toolbar buttons:        
+        $("#linkRefresh").click(function() {
+          getWeather();
+        });
+        
+        // Load the current temperature into context:
+        getWeather();
+      }
+      
+      /**
+       * Function used to fetch the latest-and-greatest weather.
+       */
+      function getWeather() {
+        // Fetch the target city/country to load weather information for from
+        // the user preferences:
+        var userPrefs = new gadgets.GadgetPrefs();
+        var city = userPrefs.getPreference("City");
+        var country = userPrefs.getPreference("Country");
+        
+        // Use this data to construct the service URL:
+        var serviceUrl = "http://api.openweathermap.org/data/2.5/find?q=" + city + "," + country + "&units=metric";
+        
+        // Trigger the service and open up a busy indicator:
+        gadgets.sap.busyIndicator.show(callWeatherService(serviceUrl), true);
+      }
+      
+      /**
+       * Call the weather service.
+       */
+      function callWeatherService(serviceUrl) {
+        // Trigger the service call:
+        $.get(serviceUrl, parseWeatherResults);
+      }
+      
+      /**
+       * Function used to parse JSON weather results from the OpenWeatherMap service.
+       */
+      function parseWeatherResults(data, status, xhr) {
+        // Update the content area with the service call results:
+        var userPrefs = new gadgets.GadgetPrefs();
+        var city = userPrefs.getPreference("City");
+        
+        $("#weather").html(city + ":&nbsp;" + data.list[0].main.temp + "&nbsp;&deg;C");
+        
+        // Hide the busy indicator:
+        gadgets.sap.busyIndicator.hide();
+      }
+      
+      // Register an initialization function to initialize the widget:
+      gadgets.util.registerOnLoadHandler(init);
+    </script>
+  </head>
+  <body>
+    <section>
+        <div id="content">
+          <span id="weather"></span>
+        </div>
+        <div id="toolbar">
+          <a id="linkRefresh" href="#"><img src="img/refresh.png" width="24" height="24" /></a>
+        </div>
+    </section>
+  </body>
+</html> 

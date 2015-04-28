@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        
+    <title>HCP Book: HANA XS Application Demo</title>
+    
+    <!-- Note: Normally, the src link would be /sap/ui5/1/resources/sap-ui-core.js.
+               However, since the HANA XS engine is on an older version of the
+               SAPUI5 SDK (one which contains a bug in its handling of routers),
+               we're pointing at the latest and greatest SDK from the SAPUI5
+               main site. -->
+    <script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+             id="sap-ui-bootstrap"
+             data-sap-ui-libs="sap.m"
+             data-sap-ui-theme="sap_bluecrystal"
+             data-sap-ui-xx-bindingSyntax="complex"
+             data-sap-ui-resourceroots='{"hcpbook.chp05.demo": "./"}'>
+    </script>
+    
+    <script>
+      sap.ui.getCore().attachInit(function() {
+    	  new sap.ui.core.ComponentContainer({
+          name: "hcpbook.chp05.demo"
+    		}).placeAt("content");
+      });
+    </script>
+  </head>
+  
+  <body class="sapUiBody" id="content">
+  </body>
+</html>

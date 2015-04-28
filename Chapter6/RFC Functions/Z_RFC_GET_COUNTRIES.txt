@@ -1,0 +1,11 @@
+FUNCTION Z_RFC_GET_COUNTRIES.
+*"----------------------------------------------------------------------
+*"*"Local Interface:
+*"  TABLES
+*"      COUNTRIES STRUCTURE  T005T
+*"----------------------------------------------------------------------
+  SELECT *
+    INTO TABLE countries
+    FROM t005t
+   WHERE spras EQ sy-langu.
+ENDFUNCTION.

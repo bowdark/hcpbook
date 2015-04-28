@@ -1,0 +1,37 @@
+html {
+		background-color: #FFFFFF;
+}
+
+body {
+	width: 80%;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+.readingList {
+	margin-top: 25px;
+	border-collapse: collapse;
+}
+
+.readingList tr th {
+	background-color: #013D7B;
+	color: #FFFFFF;
+	text-align: left;
+}
+
+.readingList td, .readingList th {
+	border: 1px solid black;
+	padding: 3px 7px 2px 7px;
+}
+
+.readingList tr:nth-of-type(even){
+	background-color: #FFFFFF;
+}
+
+.readingList tr:nth-of-type(odd){
+	background-color: #CCCCCC;
+}
+
+section {
+	margin-top: 25px;
+}

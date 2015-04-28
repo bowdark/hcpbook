@@ -1,0 +1,11 @@
+FUNCTION Z_RFC_GET_REGIONS.
+*"----------------------------------------------------------------------
+*"*"Local Interface:
+*"  TABLES
+*"      REGIONS STRUCTURE  T005U
+*"----------------------------------------------------------------------
+  SELECT *
+    INTO TABLE regions
+    FROM t005u
+   WHERE spras EQ sy-langu.
+ENDFUNCTION.

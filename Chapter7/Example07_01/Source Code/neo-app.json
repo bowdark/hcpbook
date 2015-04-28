@@ -1,0 +1,31 @@
+{
+  "authenticationMethod": "saml",
+  "welcomeFile": "index.html",
+  "routes": [
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/Northwind.svc",
+      "target": {
+        "type": "destination",
+        "name": "northwind_http"
+      },
+      "description": "HTTP Destination Pointing at Northwind OData Service"
+    }
+  ],
+  
+  "securityConstraints": [
+      {
+          "permission": "AccessApplicationDescriptor",
+          "description": "Access application descriptor",
+          "protectedPaths": ["/neo-app.json"]
+      }
+  ]
+}

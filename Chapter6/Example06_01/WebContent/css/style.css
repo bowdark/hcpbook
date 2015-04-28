@@ -1,0 +1,123 @@
+html {
+  height: 100%;
+}
+
+body {
+  padding-left: 15px;
+  height: 100%;
+}
+
+fieldset {
+  margin-top: 12px;
+}
+
+header {
+  clear: both;
+  height: auto;
+}
+
+#contentWrapper {
+  overflow: auto;
+  height: 100%;
+  background: url(../img/faux-columns.png) repeat-y;
+}
+
+#navigationBar {
+  float: left;
+  width: 249px;
+  border: 1px solid black;
+  height: 100%;
+}
+
+#navigationBar a {
+  margin: 7px;
+  display: block;
+}
+
+#worklist {
+  margin-left: 260px;
+}
+
+a {
+  background: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+td a img {
+	margin-right: 3px;
+}
+
+.form-group {
+	margin-top: 9px;
+}
+
+#addAttachment {
+	margin-top: 9px;
+}
+
+.table-stretched {
+  width: 100%;
+}
+
+.table-bordered {
+  border-spacing: 0px;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid black;
+}
+
+.table-bordered table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.table-bordered tbody tr:hover td {
+  background-color: #ffffff;
+}
+
+.table-bordered td {
+  vertical-align: top;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-width: 0px 1px 1px 0px;
+  text-align: left;
+  padding: 5px;
+  font-size: 10px;
+  font-family: Arial;
+  font-weight: normal;
+  color: #000000;
+}
+
+.table-bordered thead tr:first-child th {
+  background-color:#dddddd;
+  text-align: center;
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: bold;
+  color: #000000;
+  border: 1px solid black;
+  border-width: 0px 1px 1px 0px;
+}
+
+.table-bordered thead tr:first-child th:last-child {
+  border-right: 0px;
+}
+
+.table-bordered tbody tr:hover td {
+  background-color: #eeeeee;
+}
+
+.table-bordered tbody tr td:last-child {
+  border-right: 0px;
+}
+
+.table-bordered tbody tr:last-child td {
+  border-bottom: 0;
+}

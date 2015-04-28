@@ -1,0 +1,42 @@
+<mvc:View controllerName="hcpbook.chp05.demo.ui.Books"
+          displayBlock="true"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          xmlns="sap.m">
+  <Page id="pgBooks"
+        title="Books">
+    <subHeader>
+      <Bar id="searchBar">
+        <contentMiddle>
+          <SearchField id="searchField"
+                       showRefreshButton="{device>/isNoTouch}"
+                       search="onSearch"
+                       tooltip="Search the Bookstore Database"
+                       width="100%">
+          </SearchField>
+        </contentMiddle>
+      </Bar>
+    </subHeader>
+    <content>
+      <List id="listBooks"
+            items="{/Books}"
+            mode="{device>/listMode}"
+            noDataText="Books Catalog"
+            select="onSelect"
+            growing="true"
+            growingScrollToLoad="true">
+        <items>
+          <ObjectListItem type="{device>/listItemType}"
+                          press="onSelect"
+                          title="{title}">
+          </ObjectListItem>
+        </items>
+      </List>
+    </content>
+    <footer>
+      <Toolbar>
+        <html:button id="btnDownload" style="margin-left: 10px" onClick="javascript:window.open('ui/booklist.xsjs')">Download Book List</html:button>
+      </Toolbar>
+    </footer>
+  </Page>
+</mvc:View>

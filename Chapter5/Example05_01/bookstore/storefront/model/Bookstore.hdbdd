@@ -1,0 +1,38 @@
+namespace {Your HCP Trial Account}.hcpbook.bookstore.storefront.model;
+
+@Schema: '_SYS_BIC'
+context Bookstore {
+  type ISBN: String(13);
+  
+  type AmountType {
+    amount: Decimal(5,2);
+    currencyCode: String(3);
+  };
+  
+  entity Books {
+    key isbnNumber: ISBN;
+    title: String(100);
+    publicationYear: Integer;
+    pageCount: Integer;
+    listPrice: AmountType;
+    URL: String(255);
+    coverImageURL: String(255);
+  };
+  
+  entity Authors {
+    key id: Integer;
+    firstName: String(50);
+    lastName: String(50);
+  };
+  
+  entity BookAuthors {
+    key isbnNumber: ISBN;
+    key author: Association to Authors;
+  };
+  
+  define view BookAuthorsView as SELECT FROM BookAuthors {
+    isbnNumber,
+    author.firstName,
+    author.lastName
+  };
+};

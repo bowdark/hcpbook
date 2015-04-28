@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="Weather Widget" 
+         description="HCP Book :: Chapter 9 :: Weather Widget">
+    <Require feature="opensocial-0.9" />
+    <Require feature="opensocial-jquery" />
+    <Require feature="gadgetprefs" />
+    <Require feature="sap-xhrwrapper" />
+    <Require feature="sap-theme" />
+    <Require feature="sap-busy-indicator" />
+    <Require feature="sap-dynamic-height" />
+  </ModulePrefs>
+  
+  <UserPref name="City" display_name="City" datatype="string" default_value="Dallas" />
+  <UserPref name="Country" display_name="Country" datatype="string" default_value="US" />
+  
+  <Content type="html" href="weather.html"
+           view="authoring, consumption, mobile, preview, default" />
+</Module>

@@ -1,0 +1,16 @@
+{
+  "run": [
+    {
+      "filePath": "/hybrid/index.html",
+      "previewMode": 0,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "urlParameters": [],
+      "_metadata": {
+        "runnerId": "webapprunner",
+        "id": 4905196,
+        "displayName": "New Web Application 3"
+      }
+    }
+  ]
+}

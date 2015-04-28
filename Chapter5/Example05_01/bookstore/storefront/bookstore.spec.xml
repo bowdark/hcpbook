@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="Bookstore Widget" 
+         description="HCP Book :: Chapter 5 :: Bookstore Widget">
+    <Require feature="opensocial-0.9" />
+    <Require feature="opensocial-jquery" />
+    <Require feature="sap-xhrwrapper" />
+    <Require feature="sap-theme" />
+    <Require feature="sap-dynamic-height" />
+  </ModulePrefs>
+  
+  <Content type="html" href="index.htm"
+           view="authoring, consumption, mobile, preview, default" />
+</Module>

@@ -1,0 +1,16 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+  <Page class="sapUiFioriObjectPage"
+        title="Not Found">
+    <content>
+      <FlexBox alignItems="Center" justifyContent="Center">
+        <items>
+          <Label class="spacerTop" textAlign="Center" 
+                 text="The requested resource was not found." />
+        </items>
+      </FlexBox>
+    </content>
+    <footer>
+      <Bar />
+    </footer>
+  </Page>
+</mvc:View>

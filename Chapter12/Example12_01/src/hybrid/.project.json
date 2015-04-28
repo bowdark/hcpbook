@@ -1,0 +1,168 @@
+{
+  "generation": [
+    {
+      "templateId": "fioritemplate.UI5masterDetailKapsel",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Sun, 29 Mar 2015 16:02:07 GMT"
+    }
+  ],
+  "mockpreview": {
+    "mockUri": "/destinations/ESPM_HCP/api/",
+    "metadataFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "hybrid": {
+    "appname": "Products",
+    "appid": "com.hcpbook.hybrid",
+    "appdesc": "Products Mobile App",
+    "appversion": "1.0.0",
+    "server": "hcpms-i999999trial.hanatrial.ondemand.com",
+    "port": "443",
+    "platform": {
+      "ios": {
+        "selected": false,
+        "preferences": {
+          "Fullscreen": false,
+          "Orientation": "default",
+          "EnableViewportScale": false
+        }
+      },
+      "android": {
+        "selected": true,
+        "preferences": {
+          "Fullscreen": false,
+          "Orientation": "default",
+          "ShowTitle": false,
+          "LogLevel": "VERBOSE"
+        }
+      }
+    },
+    "plugins": {
+      "cordova": {
+        "device": {
+          "selected": true,
+          "registry": "org.apache.cordova.device"
+        },
+        "network": {
+          "selected": false,
+          "registry": "org.apache.cordova.network-information"
+        },
+        "battery": {
+          "selected": false,
+          "registry": "org.apache.cordova.battery-status"
+        },
+        "accelerometer": {
+          "selected": false,
+          "registry": "org.apache.cordova.device-motion"
+        },
+        "comprass": {
+          "selected": false,
+          "registry": "org.apache.cordova.device-orientation"
+        },
+        "geolocation": {
+          "selected": false,
+          "registry": "org.apache.cordova.geolocation"
+        },
+        "camera": {
+          "selected": false,
+          "registry": "org.apache.cordova.camera"
+        },
+        "capture": {
+          "selected": false,
+          "registry": "org.apache.cordova.media-capture"
+        },
+        "media": {
+          "selected": false,
+          "registry": "org.apache.cordova.media"
+        },
+        "file": {
+          "selected": false,
+          "registry": "org.apache.cordova.file"
+        },
+        "transfer": {
+          "selected": false,
+          "registry": "org.apache.cordova.file-transfer"
+        },
+        "dialogs": {
+          "selected": false,
+          "registry": "org.apache.cordova.dialogs"
+        },
+        "vibration": {
+          "selected": false,
+          "registry": "org.apache.cordova.vibration"
+        },
+        "contacts": {
+          "selected": false,
+          "registry": "org.apache.cordova.contacts"
+        },
+        "globalization": {
+          "selected": false,
+          "registry": "org.apache.cordova.globalization"
+        },
+        "splashscreen": {
+          "selected": false,
+          "registry": "org.apache.cordova.splashscreen"
+        },
+        "inappbrowser": {
+          "selected": false,
+          "registry": "org.apache.cordova.inappbrowser"
+        },
+        "console": {
+          "selected": true,
+          "registry": "org.apache.cordova.console"
+        }
+      },
+      "kapsel": {
+        "logon": {
+          "selected": true,
+          "registry": "com.sap.mp.cordova.plugins.logon"
+        },
+        "appupdate": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.appupdate"
+        },
+        "logger": {
+          "selected": true,
+          "registry": "com.sap.mp.cordova.plugins.logger"
+        },
+        "settings": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.settings"
+        },
+        "push": {
+          "selected": true,
+          "registry": "com.sap.mp.cordova.plugins.push"
+        },
+        "encryptedstorage": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.encryptedstorage"
+        },
+        "authproxy": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.authproxy"
+        },
+        "barcode": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.barcodescanner"
+        },
+        "odata": {
+          "selected": true,
+          "registry": "com.sap.mp.cordova.plugins.odata"
+        },
+        "e2etrace": {
+          "selected": false,
+          "registry": "com.sap.mp.cordova.plugins.e2etrace"
+        }
+      }
+    }
+  }
+}
